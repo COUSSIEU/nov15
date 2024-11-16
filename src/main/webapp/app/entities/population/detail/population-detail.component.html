@@ -28,7 +28,11 @@
             <span>{{ populationRef.typeNames }}</span>
           </dd>
         </dl>
-
+        <select name="" id="">
+          @for (champ of champs(); track $index) {
+            <option value="">{{ champ }}</option>
+          }
+        </select>
         <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
           <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Retour</span>
         </button>
