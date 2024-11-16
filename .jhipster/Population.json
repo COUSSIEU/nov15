@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20241116141726"
+  },
+  "applications": "*",
+  "documentation": "The Population entity.",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "tableName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attributNames",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typeNames",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Population",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
