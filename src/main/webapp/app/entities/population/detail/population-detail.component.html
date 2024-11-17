@@ -2,7 +2,9 @@
   <div class="col-8">
     @if (population(); as populationRef) {
       <div>
-        <h2 data-cy="populationDetailsHeading"><span>Population</span></h2>
+        <h2 data-cy="populationDetailsHeading">
+          <span>{{ populationRef.tableName }}</span>
+        </h2>
 
         <hr />
 
@@ -11,28 +13,22 @@
         <jhi-alert></jhi-alert>
 
         <dl class="row-md jh-entity-details">
-          <dt><span>ID</span></dt>
-          <dd>
-            <span>{{ populationRef.id }}</span>
-          </dd>
-          <dt><span>Table Name</span></dt>
-          <dd>
-            <span>{{ populationRef.tableName }}</span>
-          </dd>
-          <dt><span>Attribut Names</span></dt>
+          <dt><span>Lignes</span></dt>
+          <select name="" id="">
+            @for (champ of decoupe(populationRef.attributNames); track $index) {
+              <option value="">{{ champ }}</option>
+            }
+          </select>
+          <dt><span>Colonnes</span></dt>
+          <select name="" id="">
+            @for (champ of decoupe(populationRef.attributNames); track $index) {
+              <option value="">{{ champ }}</option>
+            }
+          </select>
           <dd>
             <span>{{ populationRef.attributNames }}</span>
           </dd>
-          <dt><span>Type Names</span></dt>
-          <dd>
-            <span>{{ populationRef.typeNames }}</span>
-          </dd>
         </dl>
-        <select name="" id="">
-          @for (champ of decoupe(populationRef.attributNames); track $index) {
-            <option value="">{{ champ }}</option>
-          }
-        </select>
         <hr />
         <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
           <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Retour</span>
