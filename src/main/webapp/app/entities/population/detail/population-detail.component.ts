@@ -17,7 +17,9 @@ export class PopulationDetailComponent {
   previousState(): void {
     window.history.back();
   }
-
+  decoupe(attributeNames: string | null | undefined): string[] {
+    return attributeNames ? attributeNames.split(';') : [];
+  }
   champs(): string[] {
     return 'nom;age;springboot;angular;html;css;transport;sport'.split(';');
   }
