@@ -29,7 +29,7 @@
           </dd>
         </dl>
         <select name="" id="">
-          @for (champ of champs(); track $index) {
+          @for (champ of decoupe(populationRef.attributNames); track $index) {
             <option value="">{{ champ }}</option>
           }
         </select>
