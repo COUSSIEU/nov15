@@ -13,21 +13,24 @@
         <jhi-alert></jhi-alert>
 
         <dl class="row-md jh-entity-details">
-          <dt><span>Lignes</span></dt>
-          <select name="" id="">
-            @for (champ of decoupe(populationRef.attributNames); track $index) {
-              <option value="">{{ champ }}</option>
-            }
-          </select>
-          <dt><span>Colonnes</span></dt>
-          <select name="" id="">
-            @for (champ of decoupe(populationRef.attributNames); track $index) {
-              <option value="">{{ champ }}</option>
-            }
-          </select>
-          <dd>
-            <span>{{ populationRef.attributNames }}</span>
-          </dd>
+          <form [formGroup]="formGroup">
+            <dt><span>Lignes</span></dt>
+            <select name="" id="" formControlName="lignes">
+              @for (ligne of decoupe(populationRef.attributNames); track $index) {
+                <option [value]="ligne">{{ ligne }}</option>
+              }
+            </select>
+
+            <dt><span>Colonnes</span></dt>
+            <select name="" id="" formControlName="colonnes">
+              @for (colonne of decoupe(populationRef.attributNames); track $index) {
+                <option [value]="colonne">{{ colonne }}</option>
+              }
+            </select>
+            <dd>
+              <span>{{ populationRef.attributNames }}</span>
+            </dd>
+          </form>
         </dl>
         <hr />
         <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
