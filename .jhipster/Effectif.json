@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20241118214128"
+  },
+  "applications": "*",
+  "documentation": "The Effectif entity.",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "documentation": ";;;;;;;",
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cumul",
+      "fieldType": "Long"
+    }
+  ],
+  "name": "Effectif",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "champEffectif",
+      "relationshipName": "champs",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

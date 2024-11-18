@@ -1,0 +1,81 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-candidat-heading" data-cy="CandidatCreateUpdateHeading">Créer ou éditer un Candidat</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nom">Nom</label>
+          <input type="text" class="form-control" name="nom" id="field_nom" data-cy="nom" formControlName="nom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_age">Age</label>
+          <input type="number" class="form-control" name="age" id="field_age" data-cy="age" formControlName="age" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_springboot">Springboot</label>
+          <input
+            type="number"
+            class="form-control"
+            name="springboot"
+            id="field_springboot"
+            data-cy="springboot"
+            formControlName="springboot"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_angular">Angular</label>
+          <input type="number" class="form-control" name="angular" id="field_angular" data-cy="angular" formControlName="angular" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_html">Html</label>
+          <input type="number" class="form-control" name="html" id="field_html" data-cy="html" formControlName="html" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_css">Css</label>
+          <input type="number" class="form-control" name="css" id="field_css" data-cy="css" formControlName="css" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_transport">Transport</label>
+          <input type="number" class="form-control" name="transport" id="field_transport" data-cy="transport" formControlName="transport" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_sport">Sport</label>
+          <input type="text" class="form-control" name="sport" id="field_sport" data-cy="sport" formControlName="sport" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Annuler</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Sauvegarder</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+
+/**
+ * The Candidat entity.
+ */
+entity Candidat {
+	/**
+	* 
+	*/
+	nom String,
+	age Long,
+	springboot Long,
+	angular Long,
+	html Long,
+	css Long,
+	transport Long,
+	sport String
+}
+
+// Set pagination options
+paginate Candidat with pagination
+
+// Use Data Transfer Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

@@ -18,7 +18,12 @@
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20241116141726_added_entity_Population.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241118214127_added_entity_ChampEffectif.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241118214128_added_entity_Effectif.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241118215659_added_entity_Candidat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241118215819_added_entity_Materiel.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20241118214127_added_entity_constraints_ChampEffectif.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

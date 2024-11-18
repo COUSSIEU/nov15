@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20241118215659"
+  },
+  "applications": "*",
+  "documentation": "The Candidat entity.",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "age",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "springboot",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "angular",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "html",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "css",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "transport",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sport",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Candidat",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

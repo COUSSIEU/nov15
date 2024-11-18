@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "changelogDate": "20241118214127"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valeur",
+      "fieldType": "Long"
+    }
+  ],
+  "name": "ChampEffectif",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

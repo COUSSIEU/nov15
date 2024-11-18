@@ -1,0 +1,29 @@
+
+/**
+ * The Materiel entity.
+ */
+entity Materiel {
+	/**
+	* ;;;;;;;
+	*/
+	etat String,
+	release String,
+	modele String,
+	sorte String,
+	site String,
+	region String,
+	mission String,
+	entite String
+}
+
+// Set pagination options
+paginate Materiel with pagination
+
+// Use Data Transfer Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

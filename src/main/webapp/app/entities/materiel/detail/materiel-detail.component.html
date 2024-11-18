@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (materiel(); as materielRef) {
+      <div>
+        <h2 data-cy="materielDetailsHeading"><span>Materiel</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ materielRef.id }}</span>
+          </dd>
+          <dt><span ngbTooltip=";;;;;;;">Etat</span></dt>
+          <dd>
+            <span>{{ materielRef.etat }}</span>
+          </dd>
+          <dt><span>Release</span></dt>
+          <dd>
+            <span>{{ materielRef.release }}</span>
+          </dd>
+          <dt><span>Modele</span></dt>
+          <dd>
+            <span>{{ materielRef.modele }}</span>
+          </dd>
+          <dt><span>Sorte</span></dt>
+          <dd>
+            <span>{{ materielRef.sorte }}</span>
+          </dd>
+          <dt><span>Site</span></dt>
+          <dd>
+            <span>{{ materielRef.site }}</span>
+          </dd>
+          <dt><span>Region</span></dt>
+          <dd>
+            <span>{{ materielRef.region }}</span>
+          </dd>
+          <dt><span>Mission</span></dt>
+          <dd>
+            <span>{{ materielRef.mission }}</span>
+          </dd>
+          <dt><span>Entite</span></dt>
+          <dd>
+            <span>{{ materielRef.entite }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Retour</span>
+        </button>
+
+        <button type="button" [routerLink]="['/materiel', materielRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editer</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

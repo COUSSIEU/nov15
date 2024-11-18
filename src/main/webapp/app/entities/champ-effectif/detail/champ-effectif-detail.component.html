@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (champEffectif(); as champEffectifRef) {
+      <div>
+        <h2 data-cy="champEffectifDetailsHeading"><span>Champ Effectif</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ champEffectifRef.id }}</span>
+          </dd>
+          <dt><span>Nom</span></dt>
+          <dd>
+            <span>{{ champEffectifRef.nom }}</span>
+          </dd>
+          <dt><span>Valeur</span></dt>
+          <dd>
+            <span>{{ champEffectifRef.valeur }}</span>
+          </dd>
+          <dt><span>Effectif</span></dt>
+          <dd>
+            @if (champEffectif()!.effectif) {
+              <div>
+                <a [routerLink]="['/effectif', champEffectif()!.effectif?.id, 'view']">{{ champEffectifRef.effectif?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Retour</span>
+        </button>
+
+        <button type="button" [routerLink]="['/champ-effectif', champEffectifRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editer</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

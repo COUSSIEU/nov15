@@ -1,0 +1,74 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-materiel-heading" data-cy="MaterielCreateUpdateHeading">Créer ou éditer un Materiel</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_etat" ngbTooltip=";;;;;;;">Etat</label>
+          <input type="text" class="form-control" name="etat" id="field_etat" data-cy="etat" formControlName="etat" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_release">Release</label>
+          <input type="text" class="form-control" name="release" id="field_release" data-cy="release" formControlName="release" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_modele">Modele</label>
+          <input type="text" class="form-control" name="modele" id="field_modele" data-cy="modele" formControlName="modele" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_sorte">Sorte</label>
+          <input type="text" class="form-control" name="sorte" id="field_sorte" data-cy="sorte" formControlName="sorte" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_site">Site</label>
+          <input type="text" class="form-control" name="site" id="field_site" data-cy="site" formControlName="site" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_region">Region</label>
+          <input type="text" class="form-control" name="region" id="field_region" data-cy="region" formControlName="region" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_mission">Mission</label>
+          <input type="text" class="form-control" name="mission" id="field_mission" data-cy="mission" formControlName="mission" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_entite">Entite</label>
+          <input type="text" class="form-control" name="entite" id="field_entite" data-cy="entite" formControlName="entite" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Annuler</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Sauvegarder</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+{
+  "annotations": {
+    "changelogDate": "20241118215819"
+  },
+  "applications": "*",
+  "documentation": "The Materiel entity.",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "documentation": ";;;;;;;",
+      "fieldName": "etat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "release",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "modele",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sorte",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "site",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "region",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mission",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entite",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Materiel",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

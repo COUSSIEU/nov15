@@ -51,6 +51,11 @@ public class CacheConfiguration {
             createCache(cm, smallpocs.domain.Authority.class.getName());
             createCache(cm, smallpocs.domain.User.class.getName() + ".authorities");
             createCache(cm, smallpocs.domain.Population.class.getName());
+            createCache(cm, smallpocs.domain.ChampEffectif.class.getName());
+            createCache(cm, smallpocs.domain.Effectif.class.getName());
+            createCache(cm, smallpocs.domain.Effectif.class.getName() + ".champs");
+            createCache(cm, smallpocs.domain.Candidat.class.getName());
+            createCache(cm, smallpocs.domain.Materiel.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
