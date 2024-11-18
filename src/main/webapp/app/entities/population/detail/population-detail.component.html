@@ -27,19 +27,16 @@
                 <option [value]="colonne">{{ colonne }}</option>
               }
             </select>
-            <dd>
-              <span>{{ populationRef.attributNames }}</span>
-            </dd>
+            <hr />
+            <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+              <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Retour</span>
+            </button>
+
+            <button type="button" [routerLink]="['/population', populationRef.id, 'edit']" class="btn btn-primary">
+              <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editer</span>
+            </button>
           </form>
         </dl>
-        <hr />
-        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
-          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Retour</span>
-        </button>
-
-        <button type="button" [routerLink]="['/population', populationRef.id, 'edit']" class="btn btn-primary">
-          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editer</span>
-        </button>
       </div>
     }
   </div>
