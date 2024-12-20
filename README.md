@@ -309,4 +309,4 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Cypress]: https://www.cypress.io/
 [Leaflet]: https://leafletjs.com/
 [DefinitelyTyped]: https://definitelytyped.org/
-[Angular CLI]: https://cli.angular.io/
+[Angular CLI]: https://cli.angular.io/ '# nov15'
